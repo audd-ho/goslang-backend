@@ -1,0 +1,200 @@
+{
+	"NodeType": "File",
+	"Doc": null,
+	"Package": null,
+	"Name": {
+		"NodeType": "Ident",
+		"Name": "main"
+	},
+	"Decls": [
+		{
+			"NodeType": "GenDecl",
+			"Tok": "import",
+			"Specs": [
+				{
+					"NodeType": "ImportSpec",
+					"Name": null,
+					"Path": {
+						"NodeType": "BasicLit",
+						"Kind": "STRING",
+						"Value": "\"fmt\""
+					}
+				}
+			]
+		},
+		{
+			"NodeType": "FuncDecl",
+			"Recv": null,
+			"Name": {
+				"NodeType": "Ident",
+				"Name": "GetFoo"
+			},
+			"Type": {
+				"NodeType": "FuncType",
+				"TypeParams": null,
+				"Params": {
+					"NodeType": "FieldList",
+					"List": null
+				},
+				"Results": null
+			},
+			"Body": {
+				"NodeType": "BlockStmt",
+				"List": [
+					{
+						"NodeType": "AssignStmt",
+						"Lhs": [
+							{
+								"NodeType": "Ident",
+								"Name": "hello"
+							}
+						],
+						"Tok": ":=",
+						"Rhs": [
+							{
+								"NodeType": "CallExpr",
+								"Fun": {
+									"NodeType": "Ident",
+									"Name": "make"
+								},
+								"Args": [
+									{
+										"NodeType": "ChanType",
+										"Dir": "BOTH",
+										"Value": {
+											"NodeType": "Ident",
+											"Name": "int"
+										}
+									},
+									{
+										"NodeType": "BasicLit",
+										"Kind": "INT",
+										"Value": "10"
+									}
+								]
+							}
+						]
+					},
+					{
+						"NodeType": "AssignStmt",
+						"Lhs": [
+							{
+								"NodeType": "Ident",
+								"Name": "test"
+							}
+						],
+						"Tok": ":=",
+						"Rhs": [
+							{
+								"NodeType": "CallExpr",
+								"Fun": {
+									"NodeType": "Ident",
+									"Name": "foo"
+								},
+								"Args": null
+							}
+						]
+					},
+					{
+						"NodeType": "ExprStmt",
+						"X": {
+							"NodeType": "CallExpr",
+							"Fun": {
+								"NodeType": "SelectorExpr",
+								"X": {
+									"NodeType": "Ident",
+									"Name": "fmt"
+								},
+								"Sel": {
+									"NodeType": "Ident",
+									"Name": "Println"
+								}
+							},
+							"Args": [
+								{
+									"NodeType": "Ident",
+									"Name": "test"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"NodeType": "FuncDecl",
+			"Recv": null,
+			"Name": {
+				"NodeType": "Ident",
+				"Name": "foo"
+			},
+			"Type": {
+				"NodeType": "FuncType",
+				"TypeParams": null,
+				"Params": {
+					"NodeType": "FieldList",
+					"List": null
+				},
+				"Results": {
+					"NodeType": "FieldList",
+					"List": [
+						{
+							"NodeType": "Field",
+							"Names": null,
+							"Type": {
+								"NodeType": "Ident",
+								"Name": "int"
+							}
+						}
+					]
+				}
+			},
+			"Body": {
+				"NodeType": "BlockStmt",
+				"List": [
+					{
+						"NodeType": "ReturnStmt",
+						"Results": [
+							{
+								"NodeType": "BasicLit",
+								"Kind": "INT",
+								"Value": "0"
+							}
+						]
+					}
+				]
+			}
+		}
+	],
+	"Imports": null,
+	"Unresolved": null,
+	"Comments": null,
+	"FileSet": {
+		"Base": 160,
+		"Files": [
+			{
+				"Name": "input_goslang_code.go",
+				"Base": 1,
+				"Size": 158,
+				"Lines": [
+					0,
+					13,
+					14,
+					23,
+					33,
+					35,
+					36,
+					52,
+					84,
+					102,
+					124,
+					126,
+					127,
+					144,
+					157
+				],
+				"Infos": null
+			}
+		]
+	}
+}
